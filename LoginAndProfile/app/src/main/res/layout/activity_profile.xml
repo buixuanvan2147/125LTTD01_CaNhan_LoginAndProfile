@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mau_nen_147">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header: Avatar + Tên -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <FrameLayout
+                android:layout_width="132dp"
+                android:layout_height="132dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="6dp">
+
+                <!-- Ảnh đại diện (kích thước hiển thị 120dp, tối thiểu > 96dp) -->
+                <ImageView
+                    android:id="@+id/imgAvatar_147"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_avatar"
+                    android:contentDescription="Ảnh đại diện"/>
+            </FrameLayout>
+
+            <!-- Tên người dùng -->
+            <TextView
+                android:id="@+id/tvTenNguoiDung_147"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên người dùng"
+                android:textColor="@color/mau_chu_dam_147"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Mô tả ngắn (optional) -->
+            <TextView
+                android:id="@+id/tvMoTaNgan_147"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/mau_chu_phu_147"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Hàng thống kê: Followers / Following -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:id="@+id/khungFollower_147"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="56dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/bg_card_147">
+
+                <TextView
+                    android:id="@+id/tvSoFollower_147"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="125 Followers"
+                    android:textColor="@color/mau_chu_dam_147"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/khungFollowing_147"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="56dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/bg_card_147">
+
+                <TextView
+                    android:id="@+id/tvSoFollowing_147"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="250 Following"
+                    android:textColor="@color/mau_chu_dam_147"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Khối thông tin liên hệ -->
+        <LinearLayout
+            android:id="@+id/khungThongTin_147"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_147"
+            android:padding="12dp">
+
+            <!-- Email -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:gravity="center_vertical"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:id="@+id/tvEmail_147"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="Email: xxxx@gmail.com"
+                    android:textColor="@color/mau_chu_dam_147"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <!-- Divider mảnh -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mau_vien_nhe_147" />
+
+            <!-- Số điện thoại -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:gravity="center_vertical"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:id="@+id/tvSoDienThoai_147"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="SĐT: 0123456789"
+                    android:textColor="@color/mau_chu_dam_147"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mau_vien_nhe_147" />
+
+            <!-- Skype -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:gravity="center_vertical"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:id="@+id/tvSkype_147"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="Skype: bxv147"
+                    android:textColor="@color/mau_chu_dam_147"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mau_vien_nhe_147" />
+
+            <!-- Website -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:gravity="center_vertical"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:id="@+id/tvWebsite_147"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="Web: bxv2147.sv.ute.udn.vn"
+                    android:textColor="@color/mau_chu_dam_147"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- (Tuỳ chọn) Nút Đăng xuất -->
+        <!-- Đảm bảo minHeight >= 48dp -->
+
+        <Button
+            android:id="@+id/btnDangXuat_147"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Đăng xuất"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/mau_chu_dao_147"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+</ScrollView>
