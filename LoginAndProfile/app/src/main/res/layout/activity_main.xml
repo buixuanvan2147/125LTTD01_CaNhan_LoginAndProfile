@@ -8,15 +8,17 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@color/mau_nen_147">
 
     <!-- Logo ứng dụng -->
     <ImageView
         android:id="@+id/imgLogo_147"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_logo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/ic_logo_todolist"
         android:contentDescription="Logo"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="32dp"/>
 
     <!-- Ô nhập tên người dùng -->
@@ -24,7 +26,7 @@
         android:id="@+id/edtTenNguoiDung_147"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tên đăng nhập"
+        android:hint="User name"
         android:inputType="textPersonName"
         android:padding="12dp"/>
 
@@ -33,7 +35,7 @@
         android:id="@+id/edtMatKhau_147"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Mật khẩu"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="12dp"
         android:layout_marginTop="12dp"/>
@@ -43,7 +45,10 @@
         android:id="@+id/btnDangNhap_147"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ĐĂNG NHẬP"
+        android:text="LOGIN"
+        android:background="@color/mau_chu_dao_147"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:backgroundTint="@null"
         android:layout_marginTop="24dp"/>
 
     <!-- Link quên mật khẩu -->
@@ -51,8 +56,8 @@
         android:id="@+id/tvQuenMatKhau_147"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quên mật khẩu?"
-        android:textColor="@android:color/holo_blue_dark"
+        android:text="Lost password?"
+        android:textColor="@color/mau_chu_dao_147"
         android:layout_marginTop="12dp"/>
 
 </LinearLayout>

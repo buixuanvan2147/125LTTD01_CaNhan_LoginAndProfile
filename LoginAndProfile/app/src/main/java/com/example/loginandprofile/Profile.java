@@ -1,6 +1,9 @@
 package com.example.loginandprofile;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,21 @@ public class Profile extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        LinearLayout layoutQuayLai = findViewById(R.id.layout_quay_lai);
+        layoutQuayLai.setOnClickListener(v -> {
+            finish(); // quay lại màn trước đó
+        });
+
+        // Ánh xạ nút logout
+        Button btnLogout = findViewById(R.id.btnDangXuat_147);
+        // Bắt sự kiện nhấn
+        btnLogout.setOnClickListener(v -> {
+            // Chuyển sang màn hình Profile
+            Intent i = new Intent(Profile.this, MainActivity.class);
+            startActivity(i);
+        });
+
+
     }
 }

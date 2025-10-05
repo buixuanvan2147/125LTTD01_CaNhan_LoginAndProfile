@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:background="@color/mau_nen_147">
 
     <LinearLayout
@@ -10,6 +11,84 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout_thanh_tieu_de"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/white">
+
+            <!-- Thanh ngang chứa nút back, tiêu đề, và nút cài đặt -->
+            <LinearLayout
+                android:id="@+id/layout_hang_tieu_de"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_quay_lai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_back_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="Back"
+                        android:textColor="@color/mau_chu_dao_147"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <!-- Tiêu đề ở giữa -->
+                <TextView
+                    android:id="@+id/tv_tieu_de"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Profile"
+                    android:gravity="center"
+                    android:textColor="@color/mau_chu_dao_147"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="34dp"
+                    android:layout_height="match_parent"/>
+
+                <!-- Nút bánh răng -->
+                <ImageButton
+                    android:id="@+id/btn_cai_dat"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_settings_24"/>
+            </LinearLayout>
+
+            <!-- Đường kẻ mờ phía dưới -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mau_chu_dao_147" />
+
+        </LinearLayout>
 
         <!-- Header: Avatar + Tên -->
         <LinearLayout
@@ -23,24 +102,28 @@
             <FrameLayout
                 android:layout_width="132dp"
                 android:layout_height="132dp"
-                android:foreground="?android:attr/selectableItemBackgroundBorderless"
-                android:padding="6dp">
+                android:layout_marginTop="32dp"
+                android:padding="6dp"
+                android:background="@drawable/avatar_border"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless">
 
-                <!-- Ảnh đại diện (kích thước hiển thị 120dp, tối thiểu > 96dp) -->
+                <!-- Ảnh đại diện -->
                 <ImageView
                     android:id="@+id/imgAvatar_147"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_avatar"
+                    android:scaleType="centerCrop"
                     android:contentDescription="Ảnh đại diện"/>
             </FrameLayout>
+
 
             <!-- Tên người dùng -->
             <TextView
                 android:id="@+id/tvTenNguoiDung_147"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tên người dùng"
+                android:text="Profile Name"
                 android:textColor="@color/mau_chu_dam_147"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -114,7 +197,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/bg_card_147"
             android:padding="12dp">
 
@@ -132,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="12dp"
-                    android:text="Email: xxxx@gmail.com"
+                    android:text="Email: 22115053122147@sv.ute.udn.vn"
                     android:textColor="@color/mau_chu_dam_147"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -157,7 +240,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="12dp"
-                    android:text="SĐT: 0123456789"
+                    android:text="SĐT: 039839xxxx"
                     android:textColor="@color/mau_chu_dam_147"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -181,7 +264,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="12dp"
-                    android:text="Skype: bxv147"
+                    android:text="Skype: bxv2147"
                     android:textColor="@color/mau_chu_dam_147"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -205,7 +288,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="12dp"
-                    android:text="Web: bxv2147.sv.ute.udn.vn"
+                    android:text="Web: https://www.facebook.com/bui.xuan..."
                     android:textColor="@color/mau_chu_dam_147"
                     android:textSize="15sp"/>
             </LinearLayout>
@@ -219,10 +302,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="Đăng xuất"
+            android:text="Log out"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:backgroundTint="@color/mau_chu_dao_147"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:layout_marginTop="20dp"/>
 
     </LinearLayout>
