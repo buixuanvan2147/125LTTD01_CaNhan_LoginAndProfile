@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_nen"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ====== NÚT QUAY LẠI ====== -->
+        <LinearLayout
+            android:id="@+id/layout_quay_lai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/ic_quay_lai"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="Quay lại" />
+
+            <TextView
+                android:id="@+id/tv_quay_lai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Quay lại"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- ====== ẢNH, TIÊU ĐỀ, MÔ TẢ ====== -->
+        <ImageView
+            android:id="@+id/img_chi_tiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="Ảnh chi tiết"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp" />
+
+
+        <TextView
+            android:id="@+id/tv_tieu_de_chi_tiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tiêu đề"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/cl_chu_chinh" />
+
+        <TextView
+            android:id="@+id/tv_mo_ta_chi_tiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Mô tả đầy đủ sẽ hiển thị tại đây..."
+            android:textSize="16sp"
+            android:textColor="@color/cl_phu"
+            android:lineSpacingExtra="4dp" />
+    </LinearLayout>
+</ScrollView>
